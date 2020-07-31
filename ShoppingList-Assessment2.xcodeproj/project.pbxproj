@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		75393A5A24D46BA50054521B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75393A5924D46BA50054521B /* AppDelegate.swift */; };
 		75393A5C24D46BA50054521B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75393A5B24D46BA50054521B /* SceneDelegate.swift */; };
-		75393A5E24D46BA50054521B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75393A5D24D46BA50054521B /* ViewController.swift */; };
 		75393A6124D46BA50054521B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75393A5F24D46BA50054521B /* Main.storyboard */; };
 		75393A6424D46BA50054521B /* ShoppingList_Assessment2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75393A6224D46BA50054521B /* ShoppingList_Assessment2.xcdatamodeld */; };
 		75393A6624D46BA70054521B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75393A6524D46BA70054521B /* Assets.xcassets */; };
 		75393A6924D46BA70054521B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75393A6724D46BA70054521B /* LaunchScreen.storyboard */; };
+		75393A7224D46DC00054521B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75393A7124D46DC00054521B /* CoreDataStack.swift */; };
+		75393A7424D46ED80054521B /* ListItem+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75393A7324D46ED80054521B /* ListItem+Convenience.swift */; };
+		75393A7A24D470830054521B /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75393A7924D470830054521B /* ButtonTableViewCell.swift */; };
+		75393A7C24D470A70054521B /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75393A7B24D470A70054521B /* MainTableViewController.swift */; };
+		75393A7E24D4751A0054521B /* ListItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75393A7D24D4751A0054521B /* ListItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		75393A5624D46BA50054521B /* ShoppingList-Assessment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShoppingList-Assessment2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75393A5924D46BA50054521B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75393A5B24D46BA50054521B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		75393A5D24D46BA50054521B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		75393A6024D46BA50054521B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75393A6324D46BA50054521B /* ShoppingList_Assessment2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingList_Assessment2.xcdatamodel; sourceTree = "<group>"; };
 		75393A6524D46BA70054521B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75393A6824D46BA70054521B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75393A6A24D46BA70054521B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75393A7124D46DC00054521B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		75393A7324D46ED80054521B /* ListItem+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListItem+Convenience.swift"; sourceTree = "<group>"; };
+		75393A7924D470830054521B /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		75393A7B24D470A70054521B /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		75393A7D24D4751A0054521B /* ListItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,60 @@
 		75393A5824D46BA50054521B /* ShoppingList-Assessment2 */ = {
 			isa = PBXGroup;
 			children = (
-				75393A5924D46BA50054521B /* AppDelegate.swift */,
-				75393A5B24D46BA50054521B /* SceneDelegate.swift */,
-				75393A5D24D46BA50054521B /* ViewController.swift */,
 				75393A5F24D46BA50054521B /* Main.storyboard */,
-				75393A6524D46BA70054521B /* Assets.xcassets */,
-				75393A6724D46BA70054521B /* LaunchScreen.storyboard */,
-				75393A6A24D46BA70054521B /* Info.plist */,
-				75393A6224D46BA50054521B /* ShoppingList_Assessment2.xcdatamodeld */,
+				75393A7824D46F960054521B /* CustomCell */,
+				75393A7724D46F910054521B /* ViewController */,
+				75393A7624D46F8A0054521B /* ModelController */,
+				75393A7024D46D4B0054521B /* Resources */,
+				75393A7524D46F800054521B /* Model */,
 			);
 			path = "ShoppingList-Assessment2";
+			sourceTree = "<group>";
+		};
+		75393A7024D46D4B0054521B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75393A6524D46BA70054521B /* Assets.xcassets */,
+				75393A6724D46BA70054521B /* LaunchScreen.storyboard */,
+				75393A5924D46BA50054521B /* AppDelegate.swift */,
+				75393A5B24D46BA50054521B /* SceneDelegate.swift */,
+				75393A6A24D46BA70054521B /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		75393A7524D46F800054521B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75393A6224D46BA50054521B /* ShoppingList_Assessment2.xcdatamodeld */,
+				75393A7124D46DC00054521B /* CoreDataStack.swift */,
+				75393A7324D46ED80054521B /* ListItem+Convenience.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		75393A7624D46F8A0054521B /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				75393A7D24D4751A0054521B /* ListItemController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		75393A7724D46F910054521B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				75393A7B24D470A70054521B /* MainTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		75393A7824D46F960054521B /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				75393A7924D470830054521B /* ButtonTableViewCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +194,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				75393A6424D46BA50054521B /* ShoppingList_Assessment2.xcdatamodeld in Sources */,
-				75393A5E24D46BA50054521B /* ViewController.swift in Sources */,
 				75393A5A24D46BA50054521B /* AppDelegate.swift in Sources */,
+				75393A7E24D4751A0054521B /* ListItemController.swift in Sources */,
+				75393A7424D46ED80054521B /* ListItem+Convenience.swift in Sources */,
+				75393A7A24D470830054521B /* ButtonTableViewCell.swift in Sources */,
 				75393A5C24D46BA50054521B /* SceneDelegate.swift in Sources */,
+				75393A7224D46DC00054521B /* CoreDataStack.swift in Sources */,
+				75393A7C24D470A70054521B /* MainTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JW8ZF569KC;
-				INFOPLIST_FILE = "ShoppingList-Assessment2/Info.plist";
+				INFOPLIST_FILE = "ShoppingList-Assessment2/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JW8ZF569KC;
-				INFOPLIST_FILE = "ShoppingList-Assessment2/Info.plist";
+				INFOPLIST_FILE = "ShoppingList-Assessment2/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
