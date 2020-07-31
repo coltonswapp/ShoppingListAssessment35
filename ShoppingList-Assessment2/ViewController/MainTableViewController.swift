@@ -42,7 +42,13 @@ class MainTableViewController: UITableViewController {
         
         // Set the cell's delegate
         cell.delegate = self
-
+        if cell.listItem!.isComplete {
+            cell.backgroundColor = UIColor(red: 141/255, green: 158/255, blue: 206/255, alpha: 0.2)
+            } else {
+            cell.backgroundColor = UIColor(red: 250/255, green: 169/255, blue: 179/255, alpha: 1)
+        }
+        cell.reloadInputViews()
+                            
         return cell
     }
     
@@ -55,6 +61,19 @@ class MainTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.frame.height / 10
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return ListItemController.sharedInstance.fetchedResultsController.sectionIndexTitles[section] == "0" ? "Incompleted" : "Completed"
+    }
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let header = view as? UITableViewHeaderFooterView {
+             
+            header.contentView.backgroundColor = UIColor(red: 3/255, green: 252/255, blue: 186/255, alpha: 1)
+            header.textLabel?.textColor = UIColor(red: 34/255, green: 46/255, blue: 80/255, alpha: 1)
+            header.textLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+            
+        }
     }
 
     /*
@@ -123,6 +142,19 @@ extension MainTableViewController: NSFetchedResultsControllerDelegate {
             guard let indexPath = indexPath else { break }
             tableView.reloadRows(at: [indexPath], with: .automatic)
             
+        @unknown default:
+            fatalError()
+        }
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        switch type {
+        case .delete:
+            let indexSet = IndexSet(integer: sectionIndex)
+            tableView.deleteSections(indexSet, with: .automatic)
+        case .insert:
+            let indexSet = IndexSet(integer: sectionIndex)
+            tableView.insertSections(indexSet, with: .automatic)
         @unknown default:
             fatalError()
         }

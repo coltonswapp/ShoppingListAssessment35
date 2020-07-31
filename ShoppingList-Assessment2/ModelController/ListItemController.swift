@@ -20,9 +20,9 @@ class ListItemController {
     
     init() {
         let request: NSFetchRequest<ListItem> = ListItem.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key: "itemName", ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(key: "isComplete", ascending: true)]
         
-        let resultsController: NSFetchedResultsController<ListItem> = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: nil, cacheName: nil)
+        let resultsController: NSFetchedResultsController<ListItem> = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: "isComplete", cacheName: nil)
     
         fetchedResultsController = resultsController
     
